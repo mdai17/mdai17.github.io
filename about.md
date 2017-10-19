@@ -9,6 +9,7 @@ Miodang received his BS in Mechatronics Engineering from Zhejiang University in 
 
 In the MSR program, Miaoding is interested in perception part of robotics, and he plans to focus on areas such as localization and planning, computer vision and sensor fusion. And while codes are the universal language in the world of robotics, he spares no efforts to polish his coding skills in order to freely communicate with robots. After graduation, he will dedicate himself to developing practical and affordable robotic devices for manufacturing or daily life, to bring robotics everywhere.
 
-                                                              - Miaoding
+
+-Miaoding
 
 > [MSR Program at NU](http://www.mccormick.northwestern.edu/robotics/)
