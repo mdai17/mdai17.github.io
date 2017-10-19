@@ -3,4 +3,4 @@ layout: category
 title: Contact
 ---
 
-#Email:# <m.dai@u.northwestern.edu>
+Email: <m.dai@u.northwestern.edu>
