@@ -5,7 +5,7 @@ highlighter:      rouge
 # Setup
 title:            Miaoding DAI
 tagline:          'Portfolio'
-description:      'My <a href="{{ site.baseurl }}/">Portfolio</a>.'
+description:      'My <a class="home-link {% if page.url == '/' %} active{% endif %}" href="{{ site.baseurl }}/">Portfolio</a>'
 url:              https://mdai17.github.io
 baseurl:          # the optional subpath of your site, e.g. "/blog"
                   # NB: This applies to all pages in your Jekyll site.
