@@ -3,9 +3,9 @@ markdown:         kramdown
 highlighter:      rouge
 
 # Setup
-title:            Miaoding DAI
-tagline:          ''
-description:      'Explore____  '
+title:            M.DAI
+tagline:          'Portfolio'
+description:      'My <a href="{{ site.baseurl }}/" target="_blank">Portfolio</a>.'
 url:              https://mdai17.github.io
 baseurl:          # the optional subpath of your site, e.g. "/blog"
                   # NB: This applies to all pages in your Jekyll site.
