@@ -1,13 +1,15 @@
 ---
 layout: page
-title: About
+title: About Me
 sidebar_link: true
 ---
 
 <p class="message">
-  Hey there! This page is included as an example. Feel free to customize it
-  for your own use upon downloading. Carry on!
+Miodang received his BS in Mechatronics Engineering from Zhejiang University in China in 2017. During his time as an undergrad, he learned not only a variety of courses concerning mechatronics and control theory, but also practical skills covering embedded programming, 3D modeling and simulation, prototyping and so on, which qualified him for electromechanical system integration.
+
+In the MSR program, Miaoding is interested in perception part of robotics, and he plans to focus on areas such as localization and planning, computer vision and sensor fusion. And while codes are the universal language in the world of robotics, he spares no efforts to polish his coding skills in order to freely communicate with robots. After graduation, he will dedicate himself to developing practical and affordable robotic devices for manufacturing or daily life, to bring robotics everywhere.
+
+                                                                        - Miaoding
 </p>
 
-To make pages show up in the sidebar, add `sidebar_link: true` to the front
-matter.
+> [MSR Program at NU](http://www.mccormick.northwestern.edu/robotics/)
