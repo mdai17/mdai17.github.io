@@ -2,6 +2,9 @@
 markdown:         kramdown
 highlighter:      rouge
 
+# Gems
+gems: [jekyll-paginate]
+
 # Setup
 title:            Miaoding DAI
 tagline:          'Portfolio'
@@ -21,7 +24,7 @@ paginate:         5
 # paginate_path:    '/page:num'
                     # Or '/blog/page:num' if you want to move your index pages
 
-plugins:
+plugins_dir:
   - jekyll-feed
   - jekyll-gist
   - jekyll-paginate
