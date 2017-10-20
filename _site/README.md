@@ -1,4 +1,4 @@
 # mdai17.github.io
 My portfolio.
-[mdai.tech](mdai.tech)
+[mdai.me](mdai.me)
 or [mdai17.github.io](mdai17.github.io)
