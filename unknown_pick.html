@@ -52,67 +52,71 @@
 				<!-- Main -->
 					<article id="main">
 						<header>
-							<h2>Sawyer's Travels</h2>
-							<h5>Embedded Systems in Robotics</h5>
+							<h2>End-to-end Solution for Robotic Manipulation of Unknown Objects</h2>
+							<h5>MSR Capstone Project</h5>
 						</header>
 						<section class="wrapper style5">
 							<div class="inner">
 <h3>About the Project</h3>
 
 								<div class="row">
-									<div class="5u 12u$(medium)">
+									<div class="12u 12u$(medium)">
 
 
-<p align="justify">This porject was my team's final project for <b>ME495: Embedded Systems in Robotics</b> at Northwestern University in 2017 Fall quarter. It was an open-ended final project for the course, and we succesfully 'taught' robot Sawyer how to solve a Ball-in-a-maze puzzle.</p>
-<p>We used technics including Computer vision, RRT path planning and real-time feedback control (implemented in ROS) to build the whole system.</p>
+<p align="justify">This is my capstone project for MSR program. In this project, I work with Prof. Brenna Argall and her graduate students at <b><a href="https://www.sralab.org/" target="blank">Shirley Ryan AbilityLab</a></b>. The objective of this project is to implement an end-to-end solution for robotic manipulation of unknown objects((novel, unseen in training data, or without geometry model).</p>
+<p>The task can be taken apart into three major parts: <br />
+  1) the first is to locate and recognize objects (semi-clutter) on tabletop environment under 3D space;<br />
+  2) the second is detect proper grasp points for end grippers;<br />
+  3) the last thing is to actually control robot arm to pick interested object. </p>
+<img src="./images/geom-rcnn_unknown_pick.png" height=100% width=100% alt="geom-rcnn" />
+<img src="./images/gpd_unknown_pick.png" height=100% width=100% alt="gpd" />
 
 									</div>
-
-									<div class="7u$ 12u$(medium)">
-										<div class="video-container">
-											<iframe width="1024" height="576" src="https://www.youtube.com/embed/X8-3FjEdjhU?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-										</div>
-									</div>
-
-									<div class="12u$">
-									<br />
-<p align="justify"> Take a look at the <b><a href="https://github.com/zjudmd1015/Sawyers-Travels/blob/master/README.md" target="blank" >README</a></b> to see how it works, and check out our <b><a href="https://github.com/zjudmd1015/Sawyers-Travels" target="blank" >GitHub Repo</a></b> for more information about the ROS package.</p>
-									</div>
-
-
 								</div>
 
 								<hr />
 
+<h3>Flow Chart</h3>
+<img src="./images/flow-chart_unknown_pick.png" height=100% width=100% alt="flow-chart" />
+<p>Above is the whole flow chart for this project’s pipeline of my first choice. To make it clear, interface for every part is: <br />
+1) the first part outputs the position and bounding box of interested object; the position of tabletop, the position and bounding box of other objects; <br />
+2) the second part outputs 6-DOF position and orientation of end-effector; <br />
+3) the third part takes in obstacles from part 1, and takes part2 as destination</p>
+
+<hr />
+
+
+
+
 <h3 align="left">Hardware Involved</h3>
 <ul>
-	<li align="left"><b><a href="http://www.rethinkrobotics.com/sawyer/" target="blank" >Sawyer (rethink robotics)</a></b></li>
-	<li align="left"><b><a href="https://github.com/zjudmd1015/Sawyers-Travels/blob/master/CAD/stl/Maze%201.stl" target="blank" >Self-made Wooden Maze</a></b></li>
-	<li align="left">720p Webcam</li>
+	<li align="left"><b><a href="https://www.kinovarobotics.com/en/products/robotic-arm-series/mico-robotic-arm" target="blank" >Kinova Mico</a></b></li>
+	<li align="left">RGB-D Camera (Kinect V2)</li>
 	<li align="left">Ubuntu Computer with ROS</li>
 </ul>
 
-								<hr />
+
 
 <h3 align="left">Skills Involved</h3>
 <ul>
 	<li align="left">ROS (Linux)</li>
 	<li align="left">Python</li>
-
+	<li align="left">C++</li>
+	<li align="left">PCL</li>
 	<li align="left">Computer Vision (OpenCV)</li>
-	<li align="left">Path Planning (RRT)</li>
-	<li align="left">Motion Planning</li>
-	<li align="left">Feedback Control</li>
-	<li align="left">Collaborative GitHub Usage</li>
+	<li align="left">Deep Learning</li>
+	<li align="left">ROS MoveIt!</li>
 </ul>
 
 								<hr />
 
-<h3>Learn More</h3>
+<h3>Coming soon...</h3>
 
-<p align="justify">A demo video for this project is included in <b><a href="http://snip.ly/jgz0v" target="blank">Smart Collaborative Robot Gallery</a></b> by <b>Rethink Robotics</b>. </p>
-<p align="justify">Check out the <b><a href="https://www.mccormick.northwestern.edu/mechanical/courses/descriptions/495-embedded-systems-in-robotics.html" target="blank" >course description</a></b> for <b>ME495: Embedded Systems in Robotics</b>. Also check out the other groups' final projects at <b><a href="https://vimeo.com/numsr" target="blank" > https://vimeo.com/numsr</a></b> as well.</p>
-
+<p>
+1. Working code for part 1 object detection, plus a demo video.<br />
+2. Working code for part 2 grasp point detection, plus a demo video.<br/>
+3. MoveIt! simulation demo video for part 3.<br/>
+4. A complete ROS package for the whole pipeline, generic to most platforms. </p>
 							</div>
 						</section>
 					</article>
