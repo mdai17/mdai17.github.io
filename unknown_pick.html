@@ -64,12 +64,18 @@
 
 
 <p align="justify">This is my capstone project for MSR program. In this project, I work with Prof. Brenna Argall and her graduate students at <b><a href="https://www.sralab.org/" target="blank">Shirley Ryan AbilityLab</a></b>. The objective of this project is to implement an end-to-end solution for robotic manipulation of unknown objects((novel, unseen in training data, or without geometry model).</p>
-<p>The task can be taken apart into three major parts: <br />
-  1) the first is to locate and recognize objects (semi-clutter) on tabletop environment under 3D space;<br />
-  2) the second is detect proper grasp points for end grippers;<br />
-  3) the last thing is to actually control robot arm to pick interested object. </p>
-<img src="./images/geom-rcnn_unknown_pick.png" height=100% width=100% alt="geom-rcnn" />
-<img src="./images/gpd_unknown_pick.png" height=100% width=100% alt="gpd" />
+<p>The task can be taken apart into three major steps: <br />
+  1) Recognize and locate an interested object in on tabletop environment under 3D space;<br />
+  2) Detect proper grasp points for the robot end effector;<br />
+  3) Plan a path and control the robot to actually pick that interested object. </p>
+
+<p align="justify">The ultimate goal of this project is to build a robust pipeline to have a robot arm grasp interested objects with little knowledge of the object or scene beforehand.</p>
+
+<p align="justify">Refer to my <b><a href="https://drive.google.com/file/d/1nkwlLNjLoMK-qR8m-gktYasgBhdgwJU_/view?usp=sharing" target="blank" >presentation slides</a></b> for more details of this project. ROS package is available on my <b><a href="https://github.com/zjudmd1015/unknown-pick" target="blank" >GitHub Repo</a></b>. </p>
+
+
+
+
 
 									</div>
 								</div>
@@ -77,16 +83,18 @@
 								<hr />
 
 <h3>Flow Chart</h3>
-<img src="./images/flow-chart_unknown_pick.png" height=100% width=100% alt="flow-chart" />
-<p>Above is the whole flow chart for this project’s pipeline of my first choice. To make it clear, interface for every part is: <br />
-1) the first part outputs the position and bounding box of interested object; the position of tabletop, the position and bounding box of other objects; <br />
-2) the second part outputs 6-DOF position and orientation of end-effector; <br />
-3) the third part takes in obstacles from part 1, and takes part2 as destination</p>
+<img src="./images/unknown_pick/workflow.png" height=100% width=100% alt="flow-chart" />
+<p>Above is the whole flow chart for this project’s pipeline of my first choice. </p>
+
+<p>All parts within blue rectangles are highly independent and can be replaced by alternatives, as long as the inputs/outputs are the same or similar.<br />
+For instance, the 'Grasp Detection' can be <b><a href="https://github.com/zjudmd1015/unknown-pick/blob/master/src/gen_naive_pose.cpp" target="blank" >naive version</a></b> or <b><a href="https://github.com/atenpas/gpd" target="blank" >GPD</a></b>. The following graph is a result of GPD.</p>
+<img src="./images/unknown_pick/gpd_unknown_pick.png" height=100% width=100% alt="gpd" />
+
+
+
+
 
 <hr />
-
-
-
 
 <h3 align="left">Hardware Involved</h3>
 <ul>
@@ -110,13 +118,19 @@
 
 								<hr />
 
-<h3>Coming soon...</h3>
+<h3>Demo Video</h3>
 
-<p>
-1. Working code for part 1 object detection, plus a demo video.<br />
-2. Working code for part 2 grasp point detection, plus a demo video.<br/>
-3. MoveIt! simulation demo video for part 3.<br/>
-4. A complete ROS package for the whole pipeline, generic to most platforms. </p>
+<div class="row">
+	<div class="12u 12u$(medium)">
+		<div class="video-container">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/AsTXIjYesws" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+
+	<div class="12u$">
+	<br />
+	</div>
+</div>
 							</div>
 						</section>
 					</article>
